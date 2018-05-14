@@ -1,7 +1,4 @@
-import os.Source;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -37,7 +34,7 @@ public class App {
 
         ArrayList list = dataService.generateArray(size);
 
-        OddEvenSort oddEvenSort = new OddEvenSort(list, isTune);
+        final OddEvenSort oddEvenSort = new OddEvenSort(list, isTune);
 
         timeService.start();
 
