@@ -12,9 +12,9 @@ public class App {
      * @param args - nThreads, tune, size
      */
     public static void main(String[] args) throws InterruptedException {
-        int nThreads = 1;
+        int nThreads = 32;
         boolean isTune = false;
-        int size = 10;
+        int size = 10000;
 
         try {
             nThreads = Integer.parseInt(args[0]);
@@ -41,7 +41,7 @@ public class App {
 
         timeService.start();
 
-        executor.submit(() -> oddEvenSort.sort());
+        executor.submit(oddEvenSort::sort);
         executor.shutdown();
         executor.awaitTermination(1, TimeUnit.DAYS);
 
