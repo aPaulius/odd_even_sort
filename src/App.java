@@ -49,7 +49,7 @@ public class App {
                 try {
                     oddEvenSort.sort();
                 } catch (InterruptedException e) {
-                    
+
                 }
             }
         });
