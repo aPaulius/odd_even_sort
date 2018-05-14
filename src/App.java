@@ -41,7 +41,20 @@ public class App {
 
         timeService.start();
 
-        executor.submit(oddEvenSort::sort);
+
+
+        executor.submit(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    oddEvenSort.sort();
+                } catch (InterruptedException e) {
+                    
+                }
+            }
+        });
+
+
         executor.shutdown();
         executor.awaitTermination(1, TimeUnit.DAYS);
 
