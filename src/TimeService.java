@@ -1,6 +1,3 @@
-import java.sql.SQLOutput;
-import java.sql.Time;
-
 public class TimeService {
     private long start;
     private long elapsedTime;

@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
-import java.util.stream.IntStream;
 
 public class DataService {
     public ArrayList<Integer> generateArray(int size) {
